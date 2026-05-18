@@ -1,14 +1,11 @@
-import { MainLayout } from "./shared/layouts/MainLayout"
-import { DashboardPage } from "./pages/Dashboard"
+
 import "./style.css"
+import { AppRoutes } from "./app/routes"
 
 export function App() {
 
   return(
-    <MainLayout>
-      <DashboardPage/>
-    </MainLayout>
-
+    <AppRoutes/>
   )
 
 

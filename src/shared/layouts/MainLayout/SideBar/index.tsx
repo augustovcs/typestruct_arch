@@ -1,13 +1,13 @@
 import "./style.css"
+import { Link } from "react-router-dom";
 
 export function SideBar() {
   return (
     <aside className="sidebar">
   <nav className="sidebar-nav">
-
-    <a href="#" className="sidebar-link active">
+    <Link to="/dashboard" className="sidebar-link active">
       Dashboard
-    </a>
+    </Link>
 
     <a href="#" className="sidebar-link">
       Products
