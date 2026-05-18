@@ -9,8 +9,9 @@ export function AppRoutes() {
             <Routes>
                 <Route
                 path="/"
-                element={<Navigate to="/dashboard"/>}
-                />
+                element={<Navigate to="/dashboard"/>
+
+                }/>
 
                 <Route 
                 path="/dashboard"
