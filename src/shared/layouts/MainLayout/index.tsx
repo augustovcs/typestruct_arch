@@ -16,7 +16,7 @@ export function MainLayout({children}: MainLayoutProps) {
                 </main>
             </div>
             <footer className="footer"> 
-                </footer>        
+            </footer>        
         </div>
         
     )
