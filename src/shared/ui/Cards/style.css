@@ -20,3 +20,25 @@
 
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
 }
+
+.card-title {
+  font-size: 14px;
+
+  font-weight: 600;
+
+  color: #374151;
+}
+
+.card-description {
+  font-size: 13px;
+
+  color: #6b7280;
+}
+
+.card-value {
+  font-size: 32px;
+
+  font-weight: 700;
+
+  color: #111827;
+}
