@@ -8,9 +8,7 @@ export function MainLayout({children}: MainLayoutProps) {
     return (
 
         <div className="layout">
-                <TopBar/>
-          
-            
+            <TopBar/>
             <div className="main"> 
                 <SideBar/>
                  <main className="content">

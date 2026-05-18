@@ -1,12 +1,27 @@
+import "./style.css"
+
 export function SideBar() {
   return (
-    <div className="sidebar">
-      <nav>
-        <a href="#">Dashboard</a>
-        <a href="#">Products</a>
-        <a href="#">Users</a>
-        <a href="#">Settings</a>
-      </nav>
-    </div>
+    <aside className="sidebar">
+  <nav className="sidebar-nav">
+
+    <a href="#" className="sidebar-link active">
+      Dashboard
+    </a>
+
+    <a href="#" className="sidebar-link">
+      Products
+    </a>
+
+    <a href="#" className="sidebar-link">
+      Users
+    </a>
+
+    <a href="#" className="sidebar-link">
+      Settings
+    </a>
+
+  </nav>
+</aside>
   );
 }

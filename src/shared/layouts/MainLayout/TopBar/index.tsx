@@ -1,11 +1,13 @@
+import "./style.css"
+
 export function TopBar() {
   return (
-    <div className="topbar">
-      <h1>Dashboard</h1>
+    <header className="topbar">
+  <h1>Dashboard</h1>
 
-      <div className="actions">
-        <span>Augusto</span>
-      </div>
-    </div>
+  <div className="actions">
+    <span></span>
+  </div>
+</header>
   );
 }
