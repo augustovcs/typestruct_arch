@@ -9,6 +9,8 @@ export function MainLayout({children}: MainLayoutProps) {
 
         <div className="layout">
                 <TopBar/>
+          
+            
             <div className="main"> 
                 <SideBar/>
                  <main className="content">

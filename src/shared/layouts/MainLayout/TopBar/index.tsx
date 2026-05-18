@@ -1,9 +1,11 @@
 export function TopBar() {
+  return (
+    <div className="topbar">
+      <h1>Dashboard</h1>
 
-    return(
-        <header>
-            TopBar
-        </header>
-    )
-
+      <div className="actions">
+        <span>Augusto</span>
+      </div>
+    </div>
+  );
 }
