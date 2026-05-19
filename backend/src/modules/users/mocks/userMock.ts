@@ -1,4 +1,4 @@
-import type { userType } from "../types/userType";
+import type { userType } from "../types/userType.js";
 
 export const usersMock : userType[] = [{
     
