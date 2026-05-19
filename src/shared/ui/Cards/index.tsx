@@ -6,13 +6,13 @@ export function CardReact({title, description, value}: CardProps) {
     return(
 
         <div className="card">
-            <h3 className="title">
+            <h3 className="card-title">
             {title}
             </h3>
-            <p className="description">
+            <p className="card-description">
             {description}
             </p>
-            <span className="value">
+            <span className="card-value">
             {value}
             </span>
         </div>
