@@ -11,7 +11,7 @@ export class GetUsersController {
         const service = new GetUsersService();
         const users = service.execute();
 
-        return res.json(users);
+        return res.status(200).json(users);
 
     }
 
