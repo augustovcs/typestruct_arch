@@ -17,10 +17,36 @@
 }
 
 .footer {
-  padding: 16px 24px;
-  width: 100%;
-  background-color: rgba(4, 65, 29, 0.945);
-  color: white;
+  height: 44px;
+  background: #14532d;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Linha superior sutil */
+.footer::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(74, 222, 128, 0.25) 40%,
+    rgba(74, 222, 128, 0.25) 60%,
+    transparent
+  );
+}
+
+.footer-dot {
+  width: 6px; height: 6px;
+  background: #4ade80;
+  border-radius: 50%;
+  box-shadow: 0 0 6px rgba(74, 222, 128, 0.6);
 }
 
 

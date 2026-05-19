@@ -1,26 +1,97 @@
-.layout {
+.topbar {
+  height: 60px;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(15, 23, 42, 0.07);
   display: flex;
-  flex-direction: column;
-
-  min-height: 100vh;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  position: relative;
+  z-index: 100;
 }
 
-.main {
-  display: flex;
-  flex: 1;
+/* Linha gradiente decorativa na borda inferior */
+.topbar::after {
+  content: "";
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(34, 197, 94, 0.3) 30%,
+    rgba(22, 101, 52, 0.4) 50%,
+    rgba(34, 197, 94, 0.3) 70%,
+    transparent
+  );
 }
 
-.content {
-  flex: 1;
-
-  padding: 32px;
-
-  background-color: #f5f7fa;
+/* ─── Logo ─── */
+.topbar-logo {
+  width: 32px; height: 32px;
+  background: linear-gradient(135deg, #166534, #22c55e);
+  border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
 }
 
-.footer {
-  height: 50px;
-
-  background-color: #14532d;
+/* ─── Busca ─── */
+.topbar-search {
+  display: flex; align-items: center; gap: 8px;
+  background: #f8fafc;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 10px;
+  padding: 7px 14px;
+  cursor: text;
+  transition: border-color 0.2s, box-shadow 0.2s;
 }
 
+.topbar-search:hover,
+.topbar-search:focus-within {
+  border-color: rgba(34, 197, 94, 0.25);
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.06);
+}
+
+/* ─── Botão de ícone ─── */
+.topbar-icon-btn {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  background: transparent;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s, transform 0.15s;
+  position: relative;
+}
+
+.topbar-icon-btn:hover {
+  background: #f1f5f9;
+  border-color: rgba(15, 23, 42, 0.12);
+  transform: translateY(-1px);
+}
+
+/* Bolinha de notificação */
+.notif-dot {
+  position: absolute;
+  top: 7px; right: 7px;
+  width: 7px; height: 7px;
+  background: #22c55e;
+  border-radius: 50%;
+  border: 1.5px solid white;
+}
+
+/* ─── Avatar ─── */
+.topbar-avatar {
+  width: 36px; height: 36px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #166534, #22c55e);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 13px; font-weight: 700; color: white;
+  border: 2px solid rgba(34, 197, 94, 0.25);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.topbar-avatar:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(22, 101, 52, 0.25);
+}
