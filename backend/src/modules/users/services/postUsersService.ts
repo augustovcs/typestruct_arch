@@ -1,5 +1,6 @@
 import type { userType } from "../types/userType.js";
 import { supabase } from "../../../../lib/db_conn.js";
+import { usersMock, usersMockV2 } from "../mocks/userMock.js";
 
 export class PostUsersService{
 
@@ -9,10 +10,8 @@ export class PostUsersService{
         
         const {data, error} = await supabase
         .from("users_test")
-        .insert({
-            
-
-        });
+        .insert(usersMockV2 )
+        .select();
 
         if(error) {
           throw new Error(error.message)

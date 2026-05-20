@@ -10,7 +10,7 @@ export interface userType{
 export interface userTypeV2{
     id?: number,
     name: string,
-    cpf: string,
+    cpf: number,
     email: string,
     phone: number,
     renda_mensal: number,

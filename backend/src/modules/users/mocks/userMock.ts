@@ -1,5 +1,6 @@
 import { randomInt } from "crypto";
 import type { userType, userTypeV2 } from "../types/userType.js";
+import { getRandomInt } from "../../../utils/funcUtils.js";
 
 export const usersMock : userType[] = [{
     
@@ -13,12 +14,12 @@ export const usersMock : userType[] = [{
 
 export const usersMockV2 : userTypeV2[] = [{
     
-    id?: 
-    name: string,
-    cpf: string,
-    email: string,
-    phone: number,
-    renda_mensal: number,
+    id: getRandomInt(1000, 5000),
+    name: "TESTEV2",
+    cpf: getRandomInt(1000000, 7000000),
+    email: "testev2@test.com",
+    phone: getRandomInt(1000000, 7000000),
+    renda_mensal: getRandomInt(1750, 7500),
     
 
 }];
