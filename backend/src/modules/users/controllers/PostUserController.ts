@@ -1,6 +1,7 @@
 import type {Request, Response} from "express";
 import { NOTIMP } from "node:dns";
 import { setUncaughtExceptionCaptureCallback } from "node:process";
+import { PostUsersService } from "../services/postUsersService.js";
 
 
 export class PostUsersControllers {
@@ -10,7 +11,7 @@ export class PostUsersControllers {
         res: Response
     )
     {
-        const service;
+        const service = new PostUsersService();
         const users = await service.execute();
 
         return res.status(200).json(users)
