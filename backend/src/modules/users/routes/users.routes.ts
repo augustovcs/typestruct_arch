@@ -11,6 +11,7 @@ const getUsersController = new GetUsersController();
 const postUsersController = new PostUsersControllers();
 
 
+usersRoutes.get("/post/users", postUsersController.handle);
 usersRoutes.get("/users", getUsersController.handle);
 
 export { usersRoutes }
