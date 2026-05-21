@@ -1,6 +1,7 @@
 import "./styles.css"
 import { CardReact } from "../../shared/ui/Cards";
 import { mockCard } from "../../shared/mocks/cardMock";
+import { GlowButton } from "../../shared/ui/Buttons/";
 
 export function DashboardPage() {
     return (
@@ -15,6 +16,13 @@ export function DashboardPage() {
                     />
                 ))}
             </div>
+            <div className="dashboard-btt-action">
+                <GlowButton
+                text="TESTE BOTAO"
+                />
+            </div>
+
+           
            
         </div>
     )

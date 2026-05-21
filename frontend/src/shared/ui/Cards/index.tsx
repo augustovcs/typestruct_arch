@@ -1,4 +1,5 @@
 import type { CardProps } from "../../../types/mainlayout";
+//@ts-ignore
 import "./style.css"
 
 export function CardReact({title, description, value}: CardProps) {
