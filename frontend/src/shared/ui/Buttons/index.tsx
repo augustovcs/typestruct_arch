@@ -6,10 +6,8 @@ type GlowButtonProps = {
   onClick?: () => void;
 };
 
-export const GlowButton: React.FC<GlowButtonProps> = ({
-  text,
-  onClick,
-}) => {
+export function GlowButton({text, onClick}: GlowButtonProps) {
+  
   return (
     <button className="glow-button" onClick={onClick}>
       <span className="glow-overlay"></span>
