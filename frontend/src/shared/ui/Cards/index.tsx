@@ -1,20 +1,56 @@
-import type { CardProps } from "../../../types/mainlayout";
+import type { CardProps, CardPropsAPI } from "../../../types/mainlayout";
+import {GetUsersService} from "../../../../../backend/src/modules/users/services/GetUsersService";
+
+
 //@ts-ignore
 import "./style.css"
 
-export function CardReact({title, description, value}: CardProps) {
+export function CardReact({id, name, cpf, email, phone, renda_mensal}: CardPropsAPI) {
+
+    const {
+        data: cards-obj = [],
+        isLoading, 
+        error
+    } = useQuery({
+        queryKey: ["cards-obj"],
+        queryFn: GetUsersService,
+
+        staleTime = 1000 * 60 * 1
+    })
+    const queryClient = useQueryClient();
+
+
+    const deleteMutation = useMutation({
+        mutationFn: deleteTests,
+        onSuccess: () =>  {
+        queryClient.invalidateQueries({
+            queryKey: ["tests"]
+        })
+
+        }
+    })
+
+    if (isLoading) {
+        return <div>Loading tests...</div>;
+    }
+
+    if (error) {
+        return <div>Failed to load tests.</div>;
+    } 
+
 
     return(
+        
 
         <div className="card">
             <h3 className="card-title">
-            {title}
+            {id}
             </h3>
             <p className="card-description">
-            {description}
+            {name}
             </p>
             <span className="card-value">
-            {value}
+            {cpf}
             </span>
         </div>
     )
