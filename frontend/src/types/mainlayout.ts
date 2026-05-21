@@ -10,3 +10,14 @@ export type CardProps = {
     description: string,
     value: string
 }
+
+export type CardPropsAPI = {
+
+    id?: number,
+    name: string,
+    cpf: number,
+    email: string,
+    phone: number,
+    renda_mensal: number,
+    
+}
