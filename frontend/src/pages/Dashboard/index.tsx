@@ -19,9 +19,11 @@ export function DashboardPage() {
         queryKey: ["users"],
 
         queryFn: getUsers,
-
+        
         staleTime: 1000 * 60
+        
     });
+    console.log(users)
 
     if (isLoading) {
         return <h1>carregando...</h1>;
@@ -30,7 +32,6 @@ export function DashboardPage() {
     if (error) {
         return <h1>erro ao carregar usuários</h1>;
     }
-
     return (
 
         <div>
