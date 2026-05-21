@@ -1,9 +1,21 @@
-import express from "express"
-import {usersRoutes} from "./modules/users/routes/users.routes.js"
+import express from "express";
+import cors from "cors";
 
 const app = express();
 
+app.use(cors({
+    origin: "http://localhost:5173"
+}));
+
 app.use(express.json());
-app.use(usersRoutes);
+
+app.get("/users", (req, res) => {
+
+    return res.json([
+        {
+            
+        }
+    ]);
+});
 
 export { app };

@@ -1,5 +1,5 @@
 import { usersMock } from "../mocks/userMock.js";
-import type { userType } from "../types/userType.js";
+import type { userTypeV2 } from "../types/userType.js";
 import { supabase } from "../../../../lib/db_conn.js";
 
 
@@ -8,7 +8,7 @@ export class GetUsersService {
 
     
 
-    async execute(): Promise<userType[]> {
+    async execute(): Promise<userTypeV2[]> {
 
 
 
@@ -19,8 +19,10 @@ export class GetUsersService {
         if(error) {
           throw new Error(error.message)
             }
+
+        console.log(data)
             
-        return data
+        return data || []
 
     }
 
